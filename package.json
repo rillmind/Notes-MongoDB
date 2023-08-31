@@ -1,0 +1,19 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "aplicação teste do curso de mongodb",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js localhost 8001",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raul holanda",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "mongodb": "^5.6.0",
+    "nodemon": "^2.0.22"
+  }
+}

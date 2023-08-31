@@ -1,0 +1,26 @@
+<h1 class="body_main"> Suas Notas </h1>
+    <table class="bordamassa">
+            <thead class="bordamassa">
+                <tr class="bordamassa">
+                    <th scope="col" class="bordamassa"> # </th>
+                    <th scope="col"> Título </th>
+                </tr>
+            </thead>
+            <tbody class="bordamassa">
+                {{#each notes}}
+                <tr class="bordamassa">
+                    <th scope="row" class="bordamassa">{{ @index }}</th>
+                    <td class="title-column" class="bordamassa"><a href="notes/{{ this._id }}">{{ this.title }}</a></td>
+                    <td class="actions-column" class="bordamassa">
+                        <a href="notes/edit/{{ this._id }}" class="btn btn-primary bordamassa">Editar</a>
+                        <form action="notes/delete" method="POST">
+                            <input type="hidden" name="id" value={{ this._id }}>
+                            <input class="btn btn-danger bordamassa" type="submit" value="Remover">
+                        </form>
+                    </td>
+                </tr>
+                {{else}}
+                <p> Não há notas no sistema ainda, adicione uma nova nota: <a href="notes"> Adicionar </a></p>
+                {{/each}}
+            </tbody>
+    </table>
