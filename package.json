@@ -4,7 +4,7 @@
   "description": "aplicação teste do curso de mongodb",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js localhost 8001",
+    "start": "nodemon ./main.js localhost 8001",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "raul holanda",
